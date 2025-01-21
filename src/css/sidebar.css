@@ -1,0 +1,104 @@
+:root {
+  /* Shades */
+  --gray1: #eeeeeeb2;
+  --gray2: #757575;
+  --gray-gradient: linear-gradient(
+    rgba(125, 134, 146, 0.123),
+    rgba(128, 128, 128, 0.103)
+  );
+  --shadow1: hsla(0, 0%, 50%, 0.212);
+  /* Shades ======== */
+  /* FOnt- */
+  --font-family: "Tahoma", sans-serif;
+  --fw300: 300;
+
+  --primary: #0081cf;
+  --transition: 400ms;
+}
+
+.container {
+  max-width: 100%;
+  min-height: 100vh;
+  background-color: var(--gray1);
+  padding-inline: 1rem;
+  padding-block: 1rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+.sidebar {
+  display: flex;
+  min-height: 90vh;
+  align-items: center;
+  max-width: 10vw;
+}
+.sideBarList {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+  background: var(--gray-gradient);
+  box-shadow: 2px 2px 2px var(--shadow1);
+  padding-inline: 0.8rem;
+  padding-block: 0.5rem;
+  border-radius: 6px;
+  color: var(--gray2);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 40vh;
+}
+.sidebar h3,
+item {
+  font-family: var(--font-family);
+  font-weight: 300;
+  transition: var(--transition) ease-in-out;
+  color: #757575;
+}
+.sideBarList hr {
+  width: 2rem;
+  min-width: 100%;
+  border: 1px solid var(--shadow1);
+}
+.sideBarList .linkWrapper {
+  cursor: pointer;
+}
+.sideBarList .linkWrapper .item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+}
+.sideBarList img {
+  width: 2rem;
+  transition: var(--transition);
+}
+.sidebar img:where(.right, .left) {
+  width: 1.6rem;
+  margin-top: 0.3rem;
+}
+.sidebar img:not(.right, .left):hover {
+  background-color: #a1acbd;
+  border-radius: 4px;
+  opacity: 0.8;
+  scale: 1.2;
+  transform: rotate(3deg);
+}
+
+.rightSide{
+  align-self: flex-start;
+  justify-self: flex-start;
+  margin-top: 5rem;
+  padding-left: 1rem;
+}
+.setting{
+  margin-top: auto;
+  margin-bottom: .3rem;
+}

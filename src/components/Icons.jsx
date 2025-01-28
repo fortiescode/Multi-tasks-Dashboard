@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 
 const Icons = ({ imgSrc, altText,title, children, className, linkTo, onClick }) => {
@@ -16,16 +16,6 @@ const Icons = ({ imgSrc, altText,title, children, className, linkTo, onClick }) 
         </Link>
     </div>
   );
-};
-
-Icons.propTypes = {
-  imgSrc: PropTypes.string,
-  altText: PropTypes.string,
-  className: PropTypes.string,
-  linkTo: PropTypes.string,
-  title: PropTypes.string,
-  children: PropTypes.node,
-  onClick: PropTypes.func,
 };
 
 export default Icons;

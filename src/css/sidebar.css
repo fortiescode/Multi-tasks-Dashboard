@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   /* Shades */
   --gray1: #eeeeeeb2;
@@ -8,7 +14,7 @@
   );
   --shadow1: hsla(0, 0%, 50%, 0.212);
   /* Shades ======== */
-  /* FOnt- */
+  /* Font- */
   --font-family: "Tahoma", sans-serif;
   --fw300: 300;
 
@@ -32,7 +38,7 @@
   display: flex;
   min-height: 90vh;
   align-items: center;
-  max-width: 10vw;
+  max-width: fit-content;
 }
 .sideBarList {
   min-height: 80vh;
@@ -46,6 +52,7 @@
   padding-block: 0.5rem;
   border-radius: 6px;
   color: var(--gray2);
+  max-width: 10em;
 }
 
 .wrapper {
@@ -55,13 +62,21 @@
   align-items: flex-start;
   min-height: 40vh;
 }
+.wrapper .linkWrapper{
+  /* border-bottom: 2px solid #0080cf98; */
+  padding-bottom:3px;
+
+}
 .sidebar h3,
 item {
   font-family: var(--font-family);
   font-weight: 300;
   transition: var(--transition) ease-in-out;
   color: #757575;
+  width:100%;
+
 }
+
 .sideBarList hr {
   width: 2rem;
   min-width: 100%;
@@ -74,31 +89,41 @@ item {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.6rem;
+  gap: 1rem;
 }
 .sideBarList img {
-  width: 2rem;
+  min-width: 2rem;
+  height: auto;
+  object-fit: contain;
   transition: var(--transition);
 }
 .sidebar img:where(.right, .left) {
   width: 1.6rem;
   margin-top: 0.3rem;
+  opacity: 0.8;
 }
 .sidebar img:not(.right, .left):hover {
   background-color: #a1acbd;
   border-radius: 4px;
   opacity: 0.8;
   scale: 1.2;
-  transform: rotate(3deg);
+  transform: rotate(2deg);
 }
 
-.rightSide{
+.rightSide {
+  display:flex;
+  flex-direction: column;
+  width: 100%;
   align-self: flex-start;
   justify-self: flex-start;
   margin-top: 5rem;
-  padding-left: 1rem;
+  /* margin-left: 1rem; */
+  margin-right: auto;
 }
-.setting{
+.setting {
+  padding:0;
   margin-top: auto;
-  margin-bottom: .3rem;
+  margin-bottom: 0.3rem;
+  margin-right:auto;
+  
 }

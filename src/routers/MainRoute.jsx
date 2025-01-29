@@ -2,7 +2,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Home from "./Home";
 import Habites from "./Habites";
-import Baggage from "./Baggage";
+import Travelling from "./Travelling";
 import Exercise from "./Exercise";
 import Notification from "./Notification";
 import Work from "./Work";
@@ -18,7 +18,7 @@ function MainRoute() {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/habites" element={<Habites />} />
-        <Route path="/baggage" element={<Baggage />} />
+        <Route path="/travelling" element={<Travelling />} />
         <Route path="/notification" element={<Notification />} />
         <Route path="/exercise" element={<Exercise />} />
         <Route path="/work" element={<Work />} />

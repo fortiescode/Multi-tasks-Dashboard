@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Icons = ({ imgSrc, altText,title, children, className, linkTo, onClick }) => {
   return (
     <div className="linkWrapper" >
-        <Link to={linkTo} className="item">
+        <NavLink to={linkTo} className="item">
           <img
             src={imgSrc}
             alt={altText}
@@ -13,7 +13,7 @@ const Icons = ({ imgSrc, altText,title, children, className, linkTo, onClick }) 
             onClick={onClick}
           />
           {children}
-        </Link>
+        </NavLink>
     </div>
   );
 };

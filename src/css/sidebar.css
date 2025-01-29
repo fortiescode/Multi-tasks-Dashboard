@@ -13,11 +13,7 @@
     rgba(128, 128, 128, 0.103)
   );
   --shadow1: hsla(0, 0%, 50%, 0.212);
-  /* Shades ======== */
   /* Font- */
-  --font-family: "Tahoma", sans-serif;
-  --fw300: 300;
-
   --primary: #0081cf;
   --transition: 400ms;
 }
@@ -54,7 +50,6 @@
   color: var(--gray2);
   max-width: 10em;
 }
-
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -62,29 +57,37 @@
   align-items: flex-start;
   min-height: 40vh;
 }
-.wrapper .linkWrapper{
-  /* border-bottom: 2px solid #0080cf98; */
-  padding-bottom:3px;
-
+.wrapper .linkWrapper {
+  padding-bottom: 3px;
 }
 .sidebar h3,
 item {
-  font-family: var(--font-family);
-  font-weight: 300;
+  font-weight: 400;
   transition: var(--transition) ease-in-out;
   color: #757575;
-  width:100%;
-
+  width: 100%;
 }
-
 .sideBarList hr {
   width: 2rem;
   min-width: 100%;
   border: 1px solid var(--shadow1);
 }
 .sideBarList .linkWrapper {
+  position: relative;
   cursor: pointer;
 }
+/* .linkWrapper a.active::before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  right: -12px;
+  top: -3px;
+  min-width: 153px;
+  height: 40px;
+  border: 1px solid red;
+  background-color: var(--shadow1);
+  transition: all var(--transition);
+} */
 .sideBarList .linkWrapper .item {
   display: flex;
   flex-direction: row;
@@ -94,7 +97,6 @@ item {
 .sideBarList img {
   min-width: 2rem;
   height: auto;
-  object-fit: contain;
   transition: var(--transition);
 }
 .sidebar img:where(.right, .left) {
@@ -111,7 +113,7 @@ item {
 }
 
 .rightSide {
-  display:flex;
+  display: flex;
   flex-direction: column;
   width: 100%;
   align-self: flex-start;
@@ -121,9 +123,8 @@ item {
   margin-right: auto;
 }
 .setting {
-  padding:0;
+  padding: 0;
   margin-top: auto;
   margin-bottom: 0.3rem;
-  margin-right:auto;
-  
+  margin-right: auto;
 }

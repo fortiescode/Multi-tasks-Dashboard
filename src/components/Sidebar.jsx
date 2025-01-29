@@ -38,6 +38,7 @@ const Sidebar = () => {
           className={`right`}
           alt="arrowRight"
           onClick={toggleLinks}
+          linkTo=""
         />
         <hr />
 
@@ -63,11 +64,11 @@ const Sidebar = () => {
             </Icons>
           </Link>
 
-          <Link to="/baggae">
+          <Link to="/travelling">
             <Icons
               imgSrc={baggage}
-              alt="baggage"
-              linkTo="/baggage"
+              alt="travelling"
+              linkTo="/travelling"
               title="Travelling"
             >
               {!showLinks && <Links text="Travelling" />}
@@ -78,7 +79,7 @@ const Sidebar = () => {
               imgSrc={bell}
               alt="bell"
               linkTo="/notification"
-              title="Notification"
+              title="notification"
             >
               {!showLinks && <Links text="Notification" />}
             </Icons>

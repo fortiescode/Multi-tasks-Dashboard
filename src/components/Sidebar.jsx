@@ -31,104 +31,65 @@ const Sidebar = () => {
 
   return (
     <div className="sidebar">
-      <div className="sideBarList border border-slate-400/30">
+      <div className="sideBarList border border-slate-400/30 ">
         {/* Clicking this icon will toggle the visibility of the links */}
-        <Icons
-          imgSrc={right}
-          className={`right`}
-          alt="arrowRight"
+        <img
+          src={right}
+          className={`${showLinks ? "right" : "left"}`}
+          alt="Menu"
           onClick={toggleLinks}
-          linkTo=""
         />
         <hr />
 
-        <div className="wrapper">
+        <div className="wrapper h-[80vh]">
           <Link to="/home">
-            <Icons
-              imgSrc={home}
-              alt="Home"
-              linkTo="/"
-              title="Home"
-            >
-              {!showLinks && <Links text="Home" />}
+            <Icons imgSrc={home} alt="Home" linkTo="/">
+              {!showLinks ? <Links text="Home" path="/" /> : ""}
             </Icons>
           </Link>
           <Link to="/habites">
-            <Icons
-              imgSrc={atom}
-              alt="Habites"
-              linkTo="/habites"
-              title="Habites"
-            >
-              {!showLinks && <Links text="Habites" />}
+            <Icons imgSrc={atom} alt="Habites" linkTo="/habites">
+              {!showLinks ? <Links text="Habites" path="/habites" /> : ""}
             </Icons>
           </Link>
 
           <Link to="/travelling">
-            <Icons
-              imgSrc={baggage}
-              alt="travelling"
-              linkTo="/travelling"
-              title="Travelling"
-            >
-              {!showLinks && <Links text="Travelling" />}
+            <Icons imgSrc={baggage} alt="travelling" linkTo="/travelling">
+              {!showLinks ? <Links text="Travelling" path="/travelling" /> : ""}
             </Icons>
           </Link>
           <Link to="/notification">
-            <Icons
-              imgSrc={bell}
-              alt="bell"
-              linkTo="/notification"
-              title="notification"
-            >
-              {!showLinks && <Links text="Notification" />}
+            <Icons imgSrc={bell} alt="bell" linkTo="/notification">
+              {!showLinks ? (
+                <Links text="Notification" path="/notification" />
+              ) : (
+                ""
+              )}
             </Icons>
           </Link>
           <Link to="/exercise">
-            <Icons imgSrc={bike} alt="bike" linkTo="/exercise" title="Exercise">
-              {!showLinks && <Links text="Exercise" />}
+            <Icons imgSrc={bike} alt="bike" linkTo="/exercise">
+              {!showLinks ? <Links text="Exercise" path="/exercise" /> : ""}
             </Icons>
           </Link>
           <Link to="/work">
-            <Icons
-              imgSrc={briefcase}
-              alt="briefcase"
-              linkTo="/work"
-              title="Work"
-            >
-              {!showLinks && <Links text="Work" />}
+            <Icons imgSrc={briefcase} alt="briefcase" linkTo="/work">
+              {!showLinks ? <Links text="Work" path="/work" /> : ""}
             </Icons>
           </Link>
           <Link to="/hobbies">
-            <Icons
-              imgSrc={camera}
-              alt="camera"
-              linkTo="/hobbies"
-              title="Hobbies"
-            >
-              {!showLinks && <Links text="Hobbies" />}
+            <Icons imgSrc={camera} alt="camera" linkTo="/hobbies">
+              {!showLinks ? <Links text="Hobbies" path="/hobbies" /> : ""}
             </Icons>
           </Link>
           <Link to="/morning">
-            <Icons
-              imgSrc={coffee}
-              alt="coffee"
-              linkTo="/morning"
-              title="Morning"
-            >
-              {!showLinks && <Links text="Morning" />}
+            <Icons imgSrc={coffee} alt="coffee" linkTo="/morning">
+              {!showLinks ? <Links text="Morning" path="/morning" /> : ""}
             </Icons>
           </Link>
-        </div>
-        <div className="setting">
-          <Link to="/setting">
-            <Icons
-              imgSrc={setting}
-              alt="setting"
-              linkTo="/setting"
-              title="setting"
-            >
-              {!showLinks && <Links text="Setting" />}
+          <Link to="/setting" className="mt-auto mb-2">
+            <Icons imgSrc={setting} alt="setting" linkTo="/setting">
+              {!showLinks ? <Links text="Setting" path="/setting" /> : ""}
             </Icons>
           </Link>
         </div>

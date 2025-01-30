@@ -1,19 +1,18 @@
 /* eslint-disable react/prop-types */
 import { NavLink } from "react-router-dom";
 
-const Icons = ({ imgSrc, altText,title, children, className, linkTo, onClick }) => {
+const Icons = ({ imgSrc, altText, children, className, linkTo, onClick }) => {
   return (
-    <div className="linkWrapper" >
-        <NavLink to={linkTo} className="item">
-          <img
-            src={imgSrc}
-            alt={altText}
-            className={className}
-            title={title}
-            onClick={onClick}
-          />
-          {children}
-        </NavLink>
+    <div className="linkWrapper">
+      <NavLink to={linkTo} className="item">
+        <img
+          src={imgSrc}
+          alt={altText}
+          className={className}
+          onClick={onClick}
+        />
+        {children}
+      </NavLink>
     </div>
   );
 };

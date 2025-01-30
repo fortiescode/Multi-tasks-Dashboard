@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 
+import { NavLink } from "react-router-dom";
 
-const Links = ({text}) => {
-  return <h3>{text}</h3>;
+const Links = ({ text, path }) => {
+  return <NavLink to={path}>{text}</NavLink>;
 };
 
 export default Links;

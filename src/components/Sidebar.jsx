@@ -30,35 +30,35 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="sidebar">
-      <div className="sideBarList border border-slate-400/30 ">
+    <div className="sidebar flex min-h-[90vh] items-center max-w-fit">
+      <div className="sideBarList  min-h-[80vh] flex flex-col items-end gap-4 drop-shadow-[2px_2px_2px_#80808036] rounded-md text-gray2 max-w-[10em] py-[0.5rem] px-[0.2rem] border border-slate-400/30 bg-gradient-to-bl from-gray-200 to-gray-300 ">
         {/* Clicking this icon will toggle the visibility of the links */}
         <img
           src={right}
-          className={`${showLinks ? "right" : "left"}`}
+          className={`${showLinks ? "mx-auto my-0 min-w-8 h-auto" : "ml-auto opacity-70 min-w-8"}`}
           alt="Menu"
           onClick={toggleLinks}
         />
-        <hr />
+        <hr className="w-8 min-w-[100%] border-[1px] border-gray-400/60" />
 
-        <div className="wrapper h-[80vh]">
-          <Link to="/home">
+        <div className="wrapper flex flex-col justify-between items-start gap-[0.4rem] h-[80vh] ">
+          <Link to="/home"   className="min-w-[100%]">
             <Icons imgSrc={home} alt="Home" linkTo="/">
               {!showLinks ? <Links text="Home" path="/" /> : ""}
             </Icons>
           </Link>
-          <Link to="/habites">
+          <Link to="/habites" className="min-w-[100%]">
             <Icons imgSrc={atom} alt="Habites" linkTo="/habites">
               {!showLinks ? <Links text="Habites" path="/habites" /> : ""}
             </Icons>
           </Link>
 
-          <Link to="/travelling">
+          <Link to="/travelling" className="min-w-[100%]">
             <Icons imgSrc={baggage} alt="travelling" linkTo="/travelling">
               {!showLinks ? <Links text="Travelling" path="/travelling" /> : ""}
             </Icons>
           </Link>
-          <Link to="/notification">
+          <Link to="/notification" className="min-w-[100%]">
             <Icons imgSrc={bell} alt="bell" linkTo="/notification">
               {!showLinks ? (
                 <Links text="Notification" path="/notification" />
@@ -67,27 +67,27 @@ const Sidebar = () => {
               )}
             </Icons>
           </Link>
-          <Link to="/exercise">
+          <Link to="/exercise" className="min-w-[100%]">
             <Icons imgSrc={bike} alt="bike" linkTo="/exercise">
               {!showLinks ? <Links text="Exercise" path="/exercise" /> : ""}
             </Icons>
           </Link>
-          <Link to="/work">
+          <Link to="/work" className="min-w-[100%]">
             <Icons imgSrc={briefcase} alt="briefcase" linkTo="/work">
               {!showLinks ? <Links text="Work" path="/work" /> : ""}
             </Icons>
           </Link>
-          <Link to="/hobbies">
+          <Link to="/hobbies" className="min-w-[100%]">
             <Icons imgSrc={camera} alt="camera" linkTo="/hobbies">
               {!showLinks ? <Links text="Hobbies" path="/hobbies" /> : ""}
             </Icons>
           </Link>
-          <Link to="/morning">
+          <Link to="/morning" className="min-w-[100%]">
             <Icons imgSrc={coffee} alt="coffee" linkTo="/morning">
               {!showLinks ? <Links text="Morning" path="/morning" /> : ""}
             </Icons>
           </Link>
-          <Link to="/setting" className="mt-auto mb-2">
+          <Link to="/setting" className="mt-auto mb-2 min-w-[100%]">
             <Icons imgSrc={setting} alt="setting" linkTo="/setting">
               {!showLinks ? <Links text="Setting" path="/setting" /> : ""}
             </Icons>

@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import baggage from "../assets/icons/lucide--baggage-claim.svg";
+import PageHeading from "../components/PageHeading";
 const Travelling = () => {
   return (
     <motion.div
@@ -7,9 +9,7 @@ const Travelling = () => {
       animate={{ opacity: "100%" }}
       exit={{ opacity: 0, transition: { duration: 0.2, ease: "easeIn" } }}
     >
-      <h1 className="font-lato font-semibold text-4xl text-heading1">
-        Travelling Page
-      </h1>
+      <PageHeading src={baggage} alt="baggage" heading="Travelling Page" />
     </motion.div>
   );
 };

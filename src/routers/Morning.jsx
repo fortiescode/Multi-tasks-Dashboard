@@ -1,4 +1,7 @@
 import { motion } from "framer-motion";
+import PageHeading from "../components/PageHeading";
+import coffee from "../assets/icons/lucide--coffee.svg";
+
 function Morning() {
   return (
     <motion.div
@@ -8,9 +11,7 @@ function Morning() {
     exit={{ opacity: 0 , transition:{duration:0.2, ease:"easeIn"} }}
       
     >
-      <h1 className="font-lato font-semibold text-4xl text-heading1">
-        Morning Page
-      </h1>
+      <PageHeading src={coffee} alt="coffee" heading="Morning Page" />
     </motion.div>
   );
 }

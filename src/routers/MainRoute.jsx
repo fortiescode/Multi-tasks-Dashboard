@@ -9,6 +9,7 @@ import Work from "./Work";
 import Hobbies from "./Hobbies";
 import Morning from "./Morning";
 import Setting from "./Setting";
+import User from "./User";
 
 function MainRoute() {
   const location = useLocation();
@@ -25,6 +26,7 @@ function MainRoute() {
         <Route path="/hobbies" element={<Hobbies />} />
         <Route path="/morning" element={<Morning />} />
         <Route path="/setting" element={<Setting />} />
+        <Route path="/user" element={<User />} />
       </Routes>
     </AnimatePresence>
   );

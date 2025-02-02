@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import atom from "../assets/icons/lucide--atom.svg";
+import PageHeading from "../components/PageHeading";
 
 const Habites = () => {
   return (
@@ -7,12 +9,8 @@ const Habites = () => {
     intial={{ opacity: 0 }}
     animate={{ opacity: "100%" }}
     exit={{ opacity: 0 , transition:{duration:0.2, ease:"easeIn"} }}
-      
-      
     >
-      <h1 className="font-lato font-semibold text-4xl text-heading1">
-        Habites Page
-      </h1>
+       <PageHeading src={atom} alt="Habites" heading="Habites Page" />
     </motion.div>
   );
 };

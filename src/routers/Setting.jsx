@@ -1,5 +1,8 @@
 
 import { motion } from "framer-motion";
+import PageHeading from "../components/PageHeading";
+import setting from "../assets/icons/setting.svg";
+
 function Setting() {
   return (
     <motion.div
@@ -10,9 +13,8 @@ function Setting() {
       
       
     >
-      <h1 className="font-lato font-semibold text-4xl text-heading1">
-        Setting Page
-      </h1>
+      <PageHeading src={setting} alt="setting" heading="setting Page" />
+
     </motion.div>
   );
 }

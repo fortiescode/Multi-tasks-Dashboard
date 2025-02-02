@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import PageHeading from "../components/PageHeading";
-import briefcase from "../assets/icons/lucide--briefcase-business.svg";
-
-function Work() {
+import user from "../assets/icons/user.svg";
+function User() {
   return (
     <motion.div
       className="rightSide"
@@ -10,9 +9,9 @@ function Work() {
       animate={{ opacity: "100%" }}
       exit={{ opacity: 0, transition: { duration: 0.2, ease: "easeIn" } }}
     >
-      <PageHeading src={briefcase} alt="briefcase" heading="Work Page" />
+      <PageHeading src={user} alt="user" heading="User Page" />
     </motion.div>
   );
 }
 
-export default Work;
+export default User;

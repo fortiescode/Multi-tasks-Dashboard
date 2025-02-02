@@ -14,6 +14,8 @@ import coffee from "../assets/icons/lucide--coffee.svg";
 import Icons from "./Icons";
 import Links from "./Links";
 import setting from "../assets/icons/setting.svg";
+import user from "../assets/icons/user.svg";
+import logout from "../assets/icons/logout.svg";
 
 const Sidebar = () => {
   // State to track whether the links should be shown or hidden
@@ -28,21 +30,25 @@ const Sidebar = () => {
       return newShowLinks;
     });
   };
-
+  const isLogedIn = false;
   return (
     <div className="sidebar flex min-h-[90vh] items-center max-w-fit">
       <div className="sideBarList  min-h-[80vh] flex flex-col items-end gap-4 drop-shadow-[2px_2px_2px_#80808036] rounded-md text-gray2 max-w-[10em] py-[0.5rem] px-[0.2rem] border border-slate-400/30 bg-gradient-to-bl from-gray-200 to-gray-300 ">
         {/* Clicking this icon will toggle the visibility of the links */}
         <img
           src={right}
-          className={`${showLinks ? "mx-auto my-0 min-w-8 h-auto" : "ml-auto opacity-70 min-w-8"}`}
+          className={`${
+            showLinks
+              ? "mx-auto my-0 min-w-8 h-auto"
+              : "ml-auto opacity-70 min-w-8"
+          }`}
           alt="Menu"
           onClick={toggleLinks}
         />
         <hr className="w-8 min-w-[100%] border-[1px] border-gray-400/60" />
 
         <div className="wrapper flex flex-col justify-between items-start gap-[0.4rem] h-[80vh] ">
-          <Link to="/home"   className="min-w-[100%]">
+          <Link to="/" className="min-w-[100%]">
             <Icons imgSrc={home} alt="Home" linkTo="/">
               {!showLinks ? <Links text="Home" path="/" /> : ""}
             </Icons>
@@ -87,7 +93,22 @@ const Sidebar = () => {
               {!showLinks ? <Links text="Morning" path="/morning" /> : ""}
             </Icons>
           </Link>
-          <Link to="/setting" className="mt-auto mb-2 min-w-[100%]">
+
+          {isLogedIn ? (
+            <div className="mt-auto mb-2 min-w-[100%]">
+              <Icons imgSrc={logout} alt="logout" linkTo="/logout">
+                {!showLinks ? <Links text="logout" path="/logout" /> : ""}
+              </Icons>
+            </div>
+          ) : (
+            <Link to="/user" className="mt-auto mb-2 min-w-[100%]">
+              <Icons imgSrc={user} alt="user" linkTo="/user">
+                {!showLinks ? <Links text="User" path="/user" /> : ""}
+              </Icons>
+            </Link>
+          )}
+
+          <Link to="/setting" className="mb-2 min-w-[100%]">
             <Icons imgSrc={setting} alt="setting" linkTo="/setting">
               {!showLinks ? <Links text="Setting" path="/setting" /> : ""}
             </Icons>

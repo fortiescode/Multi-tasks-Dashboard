@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
+import bike from "../assets/icons/lucide--bike.svg";
+
+import PageHeading from "../components/PageHeading";
 function Exercise() {
   return (
     <motion.div
-    className="rightSide"
-    intial={{ opacity: 0 }}
-    animate={{ opacity: "100%" }}
-    exit={{ opacity: 0 , transition:{duration:0.2, ease:"easeIn"} }}
-      
+      className="rightSide"
+      intial={{ opacity: 0 }}
+      animate={{ opacity: "100%" }}
+      exit={{ opacity: 0, transition: { duration: 0.2, ease: "easeIn" } }}
     >
-      <h1 className="font-lato font-semibold text-4xl text-heading1">
-        Exercise Page
-      </h1>
+      <PageHeading src={bike} alt="bike" heading="Exercise Page" />
     </motion.div>
   );
 }

@@ -10,6 +10,7 @@ import Hobbies from "./Hobbies";
 import Morning from "./Morning";
 import Setting from "./Setting";
 import User from "./User";
+import Logedout from "./sub-routes/Logedout";
 
 function MainRoute() {
   const location = useLocation();
@@ -27,6 +28,7 @@ function MainRoute() {
         <Route path="/morning" element={<Morning />} />
         <Route path="/setting" element={<Setting />} />
         <Route path="/user" element={<User />} />
+        <Route path="/logout" element={<Logedout />} />
       </Routes>
     </AnimatePresence>
   );

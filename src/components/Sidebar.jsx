@@ -16,21 +16,31 @@ import Links from "./Links";
 import setting from "../assets/icons/setting.svg";
 import user from "../assets/icons/user.svg";
 import logout from "../assets/icons/logout.svg";
+// import User from "../routers/User";
 
 const Sidebar = () => {
   // State to track whether the links should be shown or hidden
   const [showLinks, setShowLinks] = useState(true);
   const [right, setRight] = useState(arrowRight);
-  // Function to toggle the visibility of links
+  // Function to toggle the visibility of links in the side bar
   const toggleLinks = () => {
     setShowLinks((prevShowLinks) => {
-      // Toggle between the right and left arrows based on the new value of showLinks
       const newShowLinks = !prevShowLinks;
       setRight(newShowLinks ? arrowRight : arrowLeft);
       return newShowLinks;
     });
   };
-  const isLogedIn = false;
+  const [userIcon, setUserIcon] = useState(`${user}`);
+  const [logedIn, setLogedIn] = useState(false);
+  // Toggle the user profile icon / logout icon
+  const toggleLoging = () => {
+    setLogedIn((prevLoging) => {
+      const newLogingStatus = !prevLoging;
+      setUserIcon(logedIn ? `${user}` : `${logout}`);
+      return newLogingStatus;
+    });
+  };
+
   return (
     <div className="sidebar flex min-h-[90vh] items-center max-w-fit">
       <div className="sideBarList  min-h-[80vh] flex flex-col items-end gap-4 drop-shadow-[2px_2px_2px_#80808036] rounded-md text-gray2 max-w-[10em] py-[0.5rem] px-[0.2rem] border border-slate-400/30 bg-gradient-to-bl from-gray-200 to-gray-300 ">
@@ -93,21 +103,24 @@ const Sidebar = () => {
               {!showLinks ? <Links text="Morning" path="/morning" /> : ""}
             </Icons>
           </Link>
-
-          {isLogedIn ? (
-            <div className="mt-auto mb-2 min-w-[100%]">
-              <Icons imgSrc={logout} alt="logout" linkTo="/logout">
-                {!showLinks ? <Links text="logout" path="/logout" /> : ""}
-              </Icons>
-            </div>
-          ) : (
-            <Link to="/user" className="mt-auto mb-2 min-w-[100%]">
-              <Icons imgSrc={user} alt="user" linkTo="/user">
-                {!showLinks ? <Links text="User" path="/user" /> : ""}
+          <div className="mt-auto mb-2 min-w-[100%]">
+            <Link to={logedIn ? "/logout" : "/user"} onClick={toggleLoging}>
+              <Icons
+                imgSrc={userIcon}
+                alt={userIcon}
+                linkTo={logedIn ? "/logout" : "/user"}
+              >
+                {!showLinks ? (
+                  <Links
+                    text={logedIn ? "Logout" : "User"}
+                    path={logedIn ? "/user" : "/logout"}
+                  />
+                ) : (
+                  ""
+                )}
               </Icons>
             </Link>
-          )}
-
+          </div>
           <Link to="/setting" className="mb-2 min-w-[100%]">
             <Icons imgSrc={setting} alt="setting" linkTo="/setting">
               {!showLinks ? <Links text="Setting" path="/setting" /> : ""}

@@ -5,7 +5,7 @@ function Search() {
       <input
         type="text"
         placeholder="Search"
-        className="rounded-md text-lg text-gray2 font-lato font-normal border w-60 h-8 pl-8  pt-1 pb-1.5 bg-gray-300 focus:outline-1 focus:outline-offset-1 focus:outline-primary/60 placeholder:text-sm"
+        className="rounded-md text-lg text-gray2 font-lato font-normal border w-60 h-8 pl-8  pt-1 pb-1.5 bg-gray-300 focus:outline-1 focus:outline-offset-1 focus:outline-primary/60 placeholder:text-sm focus-visible:bg-gray-100"
       />
       <img
         src={search}

@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import PageHeading from "../components/PageHeading";
-import bell from "../assets/icons/lucide--bell.svg";
+import Separator from "../components/Separator";
 
 function Notification() {
   return (
@@ -12,7 +11,7 @@ function Notification() {
       
    
     >
-     <PageHeading src={bell} alt="Notification" heading="Notification Page" />
+      <Separator/>
     </motion.div>
   );
 }

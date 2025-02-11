@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import PageHeading from "../components/PageHeading";
-import briefcase from "../assets/icons/lucide--briefcase-business.svg";
+import Separator from "../components/Separator";
 
 function Work() {
   return (
@@ -10,7 +9,7 @@ function Work() {
       animate={{ opacity: "100%" }}
       exit={{ opacity: 0, transition: { duration: 0.2, ease: "easeIn" } }}
     >
-      <PageHeading src={briefcase} alt="briefcase" heading="Work Page" />
+      <Separator/>
     </motion.div>
   );
 }

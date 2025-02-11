@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import PageHeading from "../components/PageHeading";
-import coffee from "../assets/icons/lucide--coffee.svg";
+import Separator from "../components/Separator";
 
 function Morning() {
   return (
@@ -11,7 +10,7 @@ function Morning() {
     exit={{ opacity: 0 , transition:{duration:0.2, ease:"easeIn"} }}
       
     >
-      <PageHeading src={coffee} alt="coffee" heading="Morning Page" />
+      <Separator/>
     </motion.div>
   );
 }

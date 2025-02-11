@@ -9,12 +9,7 @@ function Hobbies() {
       animate={{ opacity: "100%" }}
       exit={{ opacity: 0, transition: { duration: 0.2, ease: "easeIn" } }}
     >
-      <div className="flex justify-start gap-2 ">
-         <img src={hobbies} className={`w-8 h-auto opacity-60`} alt="hobbies" />
-        <h1 className="font-lato font-semibold text-4xl text-heading1">
-          Hobbies Page
-        </h1>
-      </div>
+     
       <Separator/>
     </motion.div>
   );

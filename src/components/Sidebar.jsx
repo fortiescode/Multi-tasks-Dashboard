@@ -16,7 +16,6 @@ import Links from "./Links";
 import setting from "../assets/icons/setting.svg";
 import user from "../assets/icons/user.svg";
 import logout from "../assets/icons/logout.svg";
-// import User from "../routers/User";
 
 const Sidebar = () => {
   // State to track whether the links should be shown or hidden
@@ -49,8 +48,8 @@ const Sidebar = () => {
           src={right}
           className={`${
             showLinks
-              ? "mx-auto my-0 min-w-8 h-auto"
-              : "ml-auto opacity-70 min-w-8"
+              ? "mx-auto my-0 min-w-8 h-auto cursor-pointer"
+              : "ml-auto opacity-70 min-w-8 cursor-pointer"
           }`}
           alt="Menu"
           onClick={toggleLinks}

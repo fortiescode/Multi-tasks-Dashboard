@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-// import home from "../assets/icons/home.svg";
 import Button from "../components/Button";
-// import PageHeading from '../components/PageHeading'
+import Separator from "../components/Separator";
 
 const Home = () => {
   return (
@@ -11,6 +10,7 @@ const Home = () => {
       animate={{ opacity: "100%" }}
       exit={{ opacity: 0, transition: { duration: 0.2, ease: "easeIn" } }}
     >
+      <Separator />
       <div className=" flex  border border-slate-500 max-w-[34rem] py-3 px-4 rounded-md bg-neutral-200/50">
         <div>
           <h3 className="m-0 leading-5 pb-2 font-lato font-semibold text-xl text-neutral-600">
